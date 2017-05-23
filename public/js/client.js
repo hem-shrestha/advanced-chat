@@ -2,7 +2,7 @@
 - GeoLocation
 - WebSpeech
 */
-
+var SOCKET_URL = "http://128.199.99.125:3000";
 //WebSpeech API
 var final_transcript = '';
 var recognizing = false;
@@ -81,7 +81,7 @@ function timeFormat(msTime) {
 
 $(document).ready(function() {
   //setup "global" variables first
-  var socket = io.connect("127.0.0.1:3000");
+  var socket = io.connect(SOCKET_URL);
   var myRoomID = null;
 
   $("form").submit(function(event) {
