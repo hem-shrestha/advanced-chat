@@ -8,7 +8,7 @@ var express = require('express')
 , _ = require('underscore')._;
 
 app.configure(function() {
-	app.set('port', process.env.PORT || 8080);
+	app.set('port', process.env.PORT || 3000);
   	app.set('ipaddr', process.env.OPENSHIFT_NODEJS_IP || "0.0.0.0");
 	app.use(express.bodyParser());
 	app.use(express.methodOverride());
